@@ -1,0 +1,169 @@
+git remote add origin https://github.com/pavan591-0/Udemy_WebBootcamp.git
+git branch -M main
+git push -u origin main
+
+html:
+
+documentation:
+https://developer.mozilla.org/en-US/docs/Web/HTML/
+
+Lorem Ipsum: to fill a para(lipsum.com)
+
+CSS
+ we can add it in 3 ways
+ Inline : In the tag itself
+ Internal : In the head 
+ External : outside reference
+
+Internal :
+
+<style>
+    // selector -- html
+    html{
+        // CSS code
+    }
+</style>
+
+External:
+
+.css file
+in html:
+<head>
+    <link
+        rel = "stylesheet" // -- relationship
+        href = location // -- location of .css file 
+    />
+</head
+
+CSS selector:
+
+Element selector:
+// h1 is the Element selector
+h1{
+    // css code
+}
+
+class selector(.notation):
+
+.first_para{
+    // css code
+}
+
+<h1 class="first_para">TEXT</h1>
+
+Id selector:(# notation)
+
+#id_name{
+    //css code
+}
+<p id="id_name"></p>
+
+ids should be unique no 2 tags should share same id
+
+Attribute selector:
+
+tag[attribute_name]{
+    // css code
+}
+
+p[color]
+{
+    // css code
+}
+ex: <p color="blue></p>
+
+Universal selector(*)
+
+*{
+    // css code
+}
+
+font:
+
+size:
+1px = 1/96th of an inch(2.54cms) - 1 pixel
+ipt = 1/72th of an inch - 1 point
+1em = 1 * 100 % of font size of the parent tag = m(pronounced as 'm')
+1rem = 1 * 100 % of font size of the root tag = rm
+
+wight:
+keywords
+lighter, bolder (relative to parent)
+number(100, 900)
+
+
+Box:
+Padding --> Border --> Margin
+
+Css priotities:
+Position:
+li{
+color: red; (2nd priority)
+color: blue;(1st priority)
+}
+
+Section - 7 
+
+Priority of the properties in css
+
+position:
+li{
+color: red;
+color: blue; -> this takes priority.
+}
+
+specifity:
+4)li{color: blue;}
+3).class-name{color: red;}
+2)li[attribute_name]{color: purple;}
+1)#id-name {color: orange;}
+
+Type:
+3)external
+2)internal
+1)inline
+
+Importance
+li{ color: aqua !important;} even if there is a inline css bcoz of keyword this will be implied.
+
+we can combine css selectors(7.1)
+1)Group
+selector1, selector2{// css code}
+
+2)child (the child has to be only one level deep)
+selector1 > selector2 {// css code} 
+
+3)descendant(can be n level child)
+ancestor_selector descendant_selector{//css code}
+
+4)chaining: we can combine multiple selectors to be more specific,this is applied when all slectors are true
+selector1selector2..selectorn{//css code}
+
+5) combing combiners:
+we can use combination of above 4
+
+CSS Position:
+1)position: static(default no need to mention, goes bottom of the last tag)
+2)Relative: from the intial specified postion
+3)Absolute: position related to nearest potential ancestor or top left corner of the webpage
+4)fixed: position relative to top left corner of the browser window.
+
+CSS Display:
+block - takes a whole row (one below another)
+inline - takes adjacent space(one after another) -- can't set height and width
+inline-block - both combined
+none: makes element disappear.
+
+CSS Float:
+img
+{
+float: left; /*right, img has a display block*/
+}
+<img...>
+<p>...</p>
+<footer></footer>
+to make footer appear at the bottom instead of floating around the img
+we use the property "clear"
+footer{
+clear: left;
+}
