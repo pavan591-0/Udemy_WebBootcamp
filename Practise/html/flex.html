@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Flex container */
+      .flex-container {
+        display: flex; /* Enable Flexbox */
+        justify-content: space-around; /* Distribute items horizontally */
+        align-items: center; /* Center items vertically */
+        height: 100vh; /* Full viewport height */
+        flex-direction: row;
+      }
+
+      /* Flex items */
+      .box {
+        width: 100px;
+        height: 100px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .box1 {
+        background-color: #ff5733; /* Orange */
+      }
+
+      .box2 {
+        background-color: #33b5e5; /* Blue */
+      }
+
+      .box3 {
+        background-color: #4caf50; /* Green */
+      }
+
+      .box4 {
+        background-color: #ffc107; /* Yellow */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Sizing Examples</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .container {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .container div {
+        background-color: lightcoral;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        border-radius: 5px;
+      }
+
+      .fraction {
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+
+      .repeat {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .min-max {
+        grid-template-columns: minmax(100px, 200px) 1fr 2fr;
+      }
+
+      .auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+
+      .auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .dynamic {
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+      }
+
+      section {
+        margin-bottom: 50px;
+      }
+
+      section h2 {
+        text-align: center;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid Sizing Examples</h1>
+
+    <section>
+      <h2>Fraction (fr)</h2>
+      <div class="container fraction">
+        <div>1fr</div>
+        <div>2fr</div>
+        <div>1fr</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Repeat</h2>
+      <div class="container repeat">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Min-Max</h2>
+      <div class="container min-max">
+        <div>100px-200px</div>
+        <div>1fr</div>
+        <div>2fr</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Auto-Fit</h2>
+      <div class="container auto-fit">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Auto-Fill</h2>
+      <div class="container auto-fill">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Dynamic Rows and Columns</h2>
+      <div class="container dynamic">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </section>
+  </body>
+</html>

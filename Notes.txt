@@ -1,3 +1,5 @@
+git add .
+git commit -m "message"
 git remote add origin https://github.com/pavan591-0/Udemy_WebBootcamp.git
 git branch -M main
 git push -u origin main
@@ -145,7 +147,8 @@ we can use combination of above 4
 CSS Position:
 1)position: static(default no need to mention, goes bottom of the last tag)
 2)Relative: from the intial specified postion
-3)Absolute: position related to nearest potential ancestor or top left corner of the webpage
+3)Absolute: position relative to nearest potential ancestor or top left corner of the webpage
+i.e nearest ancestor should have the property position: relative. it uses z-index.
 4)fixed: position relative to top left corner of the browser window.
 
 CSS Display:
@@ -162,8 +165,52 @@ float: left; /*right, img has a display block*/
 <img...>
 <p>...</p>
 <footer></footer>
-to make footer appear at the bottom instead of floating around the img
-we use the property "clear"
+to make footer/ any tag that we dont want to wrap around image then we use the property "clear" for ex:
+
 footer{
 clear: left;
 }
+appear at the bottom instead of floating around the img
+
+Float is not extensively used nowadays.
+
+Responsive websites:
+When we minimize or change dimensions the website content will automatically adjust. How?
+by using:
+1)Media
+2)Grid
+3)Flexbox
+4)Bootstrap
+
+1)media query: works as css selector.
+@media(max-width: 600px){
+	/* CSS for screens below or equal to 600px wide */
+}
+
+Flexbox:
+
+display: flex; (it is a diff system from other display options)
+we use container generally
+everything becomes block.(horizontal or vertical)
+we can also use:
+display: inline-flex;
+gap(between 2 items)
+
+flex-direction: row(default)(x-axis)
+flex-direction: column (-y axis) 
+
+there are two main and cross axis main would be of flex direction axis and cross would be its 
+perpendicular
+
+flex-basis can only be applied on child not one the container.
+
+In flex it is important where to place the properties whether to place in child or parent.
+Flex Layout:Align, justify and wrap
+order(child)
+flex-wrap:nowrap(defaul)(not best option) / wrap(contents go to next line)(parent property)/wrap reverse
+justify-content:space-between/center/flex-(start/end) &etc.. (parent)(on main axis)
+align-items: flex-(start/end), center (parent)(on cross-axis)(should be set to nowrap)
+align-self: center(child)
+align-content: (only works if it is wrap)
+
+use css-tricks website for review 
